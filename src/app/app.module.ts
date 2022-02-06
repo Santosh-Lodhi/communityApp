@@ -8,9 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { DatePipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DatePipe } from '@angular/common';
     MatCardModule,
     MatListModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
