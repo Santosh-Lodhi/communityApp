@@ -12,6 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DatePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { StoreModule } from '@ngrx/store';
+import { employeeReducer } from './store/employee.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { EmployeeEffects } from './core/emp.effects';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatGridListModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    EffectsModule.forRoot([EmployeeEffects]),
+    StoreModule.forRoot({employee: employeeReducer })
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
