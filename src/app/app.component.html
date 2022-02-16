@@ -5,7 +5,7 @@
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
     
-    <mat-card class="employee-card" *ngFor="let emp of results">
+    <mat-card class="employee-card" *ngFor="let emp of employeeList$ | async">
         <mat-grid-list cols="2">
             <mat-grid-tile>
                 <img mat-card-image src="{{emp.avatar}}">
